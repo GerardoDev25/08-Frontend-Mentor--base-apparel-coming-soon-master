@@ -1,0 +1,116 @@
+/* ************************************************ */
+/* ? ******************* root ********************* */
+/* ************************************************ */
+
+:root {
+   /* ### Primary */
+
+   --Desaturated-Red: hsl(0, 36%, 70%);
+   --Soft-Red: hsl(0, 93%, 68%);
+   /* ### Neutral */
+   --Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+   /* ### Gradients */
+   --Linear-1-135deg-from: hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+   --Linear-135deg-from: hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+
+   font-size: 16px;
+
+   font-family: "Josefin Sans", sans-serif;
+}
+
+/* ************************************************ */
+/* ? ******************* body ********************* */
+/* ************************************************ */
+html,
+body {
+   height: 120vh;
+   width: 100vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   /* background-color: aqua; */
+}
+
+/* ************************************************ */
+/* ? ******************* main ********************* */
+/* ************************************************ */
+main {
+   /* background-color: antiquewhite; */
+   width: 100%;
+   height: 95%;
+   max-height: 60rem;
+   /* border: 2px dotted red; */
+   display: grid;
+   grid-template-rows: 10% 25% 65%;
+}
+
+.section {
+   width: 100%;
+   height: 100%;
+   /* border: 3px dotted violet; */
+}
+
+/* ************************************************ */
+/* ? ****************** header ******************** */
+/* ************************************************ */
+
+.header {
+   grid-row-start: 1;
+   grid-row-end: 2;
+   display: flex;
+   align-items: center;
+   padding-left: 2rem;
+}
+
+.logo {
+   height: 25%;
+   width: 30%;
+   background-image: url("./images/logo.svg");
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: center;
+}
+
+/* ************************************************ */
+/* ? ****************** image ******************** */
+/* ************************************************ */
+
+.image {
+   grid-row-start: 2;
+   grid-row-end: 3;
+
+   background-image: url("./images/hero-mobile.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+/* ************************************************ */
+/* ? ***************** contents ******************* */
+/* ************************************************ */
+.contents {
+   grid-row-start: 3;
+   grid-row-end: 4;
+   border: 3px dotted violet;
+   padding: 3rem;
+   display: flex;
+   flex-direction: column;
+}
+
+.contents h1,
+.contents p {
+   margin: 0;
+   padding: 0;
+}
+
+.text {
+
+   height: 60%;
+   width: calc(100% - 6rem);
+}
+
+.form {
+   height: 40%;
+   width: 100%;
+}
