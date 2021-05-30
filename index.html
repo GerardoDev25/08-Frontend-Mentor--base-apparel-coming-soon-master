@@ -48,21 +48,24 @@
                </p>
             </div>
             <div class="form">
-               <form>
+               <form id="form">
                   <input
                      type="text"
+                     id="email"
                      placeholder="Email Addres"
+                     autocomplete="off"
                   />
-                  <div class="error"></div>
+                  <div class="error" id="divError"></div>
                   <button>
                      <img src="./images/icon-arrow.svg" alt="" />
                   </button>
                </form>
-               <p class="error">Please provide a valid Email</p>
+               <p class="error" id="pError">Please provide a valid Email</p>
             </div>
          </div>
       </main>
       <!--      
       Email Address -->
+      <script src="script.js"></script>
    </body>
 </html>
