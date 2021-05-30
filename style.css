@@ -19,6 +19,12 @@
    font-family: "Josefin Sans", sans-serif;
 }
 
+*,
+*::before,
+*::after {
+   box-sizing: content-box;
+}
+
 /* ************************************************ */
 /* ? ******************* body ********************* */
 /* ************************************************ */
@@ -38,11 +44,13 @@ body {
 main {
    /* background-color: antiquewhite; */
    width: 100%;
+   min-width: 375px;
    height: 95%;
-   max-height: 60rem;
+   max-height: 900px;
    /* border: 2px dotted red; */
    display: grid;
    grid-template-rows: 10% 25% 65%;
+   grid-template-columns: 100%;
 }
 
 .section {
@@ -56,16 +64,21 @@ main {
 /* ************************************************ */
 
 .header {
+   /* border: 2px dotted yellowgreen; */
+
    grid-row-start: 1;
    grid-row-end: 2;
    display: flex;
    align-items: center;
    padding-left: 2rem;
+   width: calc(100% - 2rem);
 }
 
 .logo {
    height: 25%;
+   min-height: 25px;
    width: 30%;
+   min-width: 110px;
    background-image: url("./images/logo.svg");
    background-repeat: no-repeat;
    background-size: contain;
@@ -77,9 +90,9 @@ main {
 /* ************************************************ */
 
 .image {
+   /* border: 2px dotted yellowgreen; */
    grid-row-start: 2;
    grid-row-end: 3;
-
    background-image: url("./images/hero-mobile.jpg");
    background-repeat: no-repeat;
    background-size: cover;
@@ -92,10 +105,14 @@ main {
 .contents {
    grid-row-start: 3;
    grid-row-end: 4;
-   border: 3px dotted violet;
-   padding: 3rem;
+   /* border: 4px dotted violet; */
+   padding: 2rem 2rem;
    display: flex;
    flex-direction: column;
+   height: calc(100% - 4rem);
+   width: calc(100% - 4rem);
+   justify-content: center;
+   align-items: center;
 }
 
 .contents h1,
@@ -104,13 +121,99 @@ main {
    padding: 0;
 }
 
+/* ************************************************ */
+/* ? ******************* Text ********************* */
+/* ************************************************ */
 .text {
-
-   height: 60%;
-   width: calc(100% - 6rem);
+   /* border: 2px dotted black; */
+   height: calc(60% - 3rem);
+   width: 100%;
+   /* width: calc(100% - 6rem); */
+   color: var(--Desaturated-Red);
+   text-align: center;
 }
+
+.text h1 {
+   padding-top: 0;
+   letter-spacing: 0.7rem;
+   font-size: 3.3rem;
+   line-height: 3.2rem;
+   font-weight: 300;
+   text-transform: uppercase;
+}
+
+.text span {
+   color: var(--Dark-Grayish-Red);
+   font-weight: 600;
+}
+
+.text p {
+   line-height: 1.5rem;
+   padding-top: 1rem;
+}
+
+/* ************************************************ */
+/* ? ******************* Form ********************* */
+/* ************************************************ */
 
 .form {
-   height: 40%;
+   /* border: 2px dotted black; */
+   padding-top: 3rem;
+   height: calc(40% - 3rem);
    width: 100%;
 }
+form {
+   position: relative;
+}
+
+form div {
+   position: absolute;
+   right: 5.5rem;
+   top: 30%;
+   width: 20px;
+   height: 20px;
+   /* background-color: red; */
+   background-image: url("./images/icon-error.svg");
+   background-size: contain;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.form input[type="text"] {
+   width: 95%;
+   height: 3rem;
+   border-radius: 2rem;
+   border: 2px solid var(--Desaturated-Red);
+}
+
+input::placeholder {
+   color: var(--Desaturated-Red);
+   padding-left: .5  rem;
+}
+input:focus {
+   border: none;
+   outline: none;
+}
+
+button {
+   position: absolute;
+   right: 0.1rem;
+   width: 4rem;
+   height: 3.2rem;
+   border: none;
+   border-radius: 2rem;
+   background: linear-gradient(
+      135deg,
+      hsl(0, 80%, 86%) 0%,
+      hsl(0, 74%, 74%) 41%
+   );
+}
+
+.form p {
+   color: var(--Desaturated-Red);
+   font-size: 0.8rem;
+   padding-left: 1rem;
+   padding-top: 0.5rem;
+}
+
+/* hsl(0, 80%, 86%), to hsl(0, 74%, 74%); */
