@@ -232,7 +232,7 @@ button:hover {
       min-height: 730px;
       grid-template-rows: 25% 75%;
       grid-template-columns: 60% 40%;
-      background-image: url("/images/bg-pattern-desktop.svg");
+      background-image: url("./images/bg-pattern-desktop.svg");
       background-repeat: no-repeat;
       background-size: cover;
    }
